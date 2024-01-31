@@ -170,5 +170,5 @@ from random import randint
 # Homework № 10 -----------------------------------------------------------
 
 
-# print("Hello GitHub")
+print("Hello GitHub !!!")
 
