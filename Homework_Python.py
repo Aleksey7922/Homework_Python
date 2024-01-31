@@ -157,18 +157,18 @@
 from random import randint
 
 # tpl = tuple(randint(0, 9) for i in range(10))  # сгенерировали кортеж
-# print(tpl)
-# stl = []
-# for i in tpl:
-#     if i not in stl:
-#         stl.append(i)
-# print(stl)
-# for i in stl:
-#     print("Количество ", i, "=", tpl.count(i))  # ???
+# print(tpl)  # вывели кортеж
+# stl = [] # создали пустой СПИСОК
+# for i in tpl: # проходим по кортежу
+#     if i not in stl: # если элемента нет в списке
+#         stl.append(i) # то добавляем его в список
+# print(stl) # выводим список
+# for i in stl: # проходим по списку
+#     print("Количество ", i, "=", tpl.count(i))  # ???  # считаем элементы, и выводим результат
 
 
 # Homework № 10 -----------------------------------------------------------
 
 
-print("Ура! У меня получилось!")
+print("Ура! У меня получилось!")  # GitHub
 
