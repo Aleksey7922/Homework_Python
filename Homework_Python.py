@@ -170,5 +170,19 @@ from random import randint
 # Homework № 10 -----------------------------------------------------------
 
 
-print("Ура! У меня получилось!")  # GitHub
+# print("Ура! У меня получилось!")  # GitHub
 
+
+# Homework № 11 -----------------------------------------------------------
+
+m_olimpia = ["Matvei", "Evgeniya", "Michail", "Maxim", "Natalia"]
+ph_olimpia = ["Maxim", "Matvei", "Alexandr"]
+all_prizewinners = m_olimpia + ph_olimpia  # все призеры
+match_olimpia = set(m_olimpia)  # преобразовали
+phys_olimpia = set(ph_olimpia)  # преобразовали
+two_prizewinners = match_olimpia & phys_olimpia  # призеры двух олимпиад ??????????
+new_match_olimpia = match_olimpia & phys_olimpia  # новый список по матем
+del phys_olimpia  # удалили список по физике
+print("Все призеры: ", all_prizewinners)
+print("Призеры обеих команд: ", two_prizewinners)
+print("Обновленный список призеров по математике: ", new_match_olimpia)
