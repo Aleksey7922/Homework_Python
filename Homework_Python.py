@@ -229,15 +229,26 @@ from random import randint
 # print(sales[person])
 
 
+# Homework № 13 -----------------------------------------------------------
 
+dict_ = {}
+summ = 0
+sr_bull = 0
+# j = 1
+a = int(input("кол-во: "))
+for i in range(a):
+    # j += 1
+    key = input("студент: ")
+    dict_[key] = int(input("бал: "))
+print(dict_)
 
+for k, v in dict_.items():
+    print(k, "->", v)
+    summ += v
+    sr_bull = summ / len(dict_)
 
+for i in dict_:
+    if dict_[i] > sr_bull:
+        print(dict_[i])
 
-
-
-
-
-
-
-
-
+print("Средний балл: ", round(sr_bull, 1))
