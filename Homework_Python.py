@@ -231,24 +231,111 @@ from random import randint
 
 # Homework № 13 -----------------------------------------------------------
 
-dict_ = {}
-summ = 0
-sr_bull = 0
-# j = 1
-a = int(input("кол-во: "))
-for i in range(a):
-    # j += 1
-    key = input("студент: ")
-    dict_[key] = int(input("бал: "))
-print(dict_)
+# dict_ = {}
+# summ = 0
+# sr_bull = 0
+# # j = 1
+# a = int(input("кол-во: "))
+# for i in range(a):
+#     key = input(str(i + 1) + " -студент: ")
+#     dict_[key] = int(input("бал: "))
+# print(dict_)
+#
+# for k, v in dict_.items():
+#     print(k, "->", v)
+#     summ += v
+#     sr_bull = summ / len(dict_)
+#
+# for i in dict_:
+#     if dict_[i] > sr_bull:
+#         print(dict_[i])
+#
+# print("Средний балл: ", round(sr_bull, 1))
 
-for k, v in dict_.items():
-    print(k, "->", v)
-    summ += v
-    sr_bull = summ / len(dict_)
+# --------------------------------------------------------------------------------------------
+#
+# students = {}
+#
+# n = int(input("Кол-во студентов: "))
+# s = 0
+# for i, key in enumerate(range(n), 1):
+#     name = input(str(i) + "-й студент: ")
+#     point = int(input("Балл: "))
+#     students[name] = point  # записали данные в словарь
+#     s += point
+#
+# average = s / n
+# print("Средний балл:", average)
+# for key in students:
+#     if students[key] > average:
+#         print(key)
 
-for i in dict_:
-    if dict_[i] > sr_bull:
-        print(dict_[i])
 
-print("Средний балл: ", round(sr_bull, 1))
+# def func(i):
+#     return i[1]
+#
+#
+# d = {"b": 15, "a": 7, "c": 3}
+# print(d)
+# lst = list(d.items())
+# print(lst)
+# lst.sort(key=lambda i: i[1])
+# # lst.sort(key=func)
+# print(lst)
+# print(dict(lst))
+
+
+# Homework № 14 -----------------------------------------------------------
+
+# Найти S параллелепипеда и прямоугольника
+# def outer(a, b, c):  # создали функцию, передали стороны параллелепипеда
+#     def inner(i, j):  # создали вложенную функцию, передали стороны прямоугольника
+#         return i * j # вернет произведение сторон (S прямоугольника)
+#
+#     s = 2 * (inner(a, b) + inner(a, c) + inner(b, c))  # используем (вызываем) вложенную функцию (умножение сторон)
+#     return s # наружная функция вернет произведение сторон параллелепипеда (S параллелепипеда)
+#
+#
+# print(outer(2, 4, 6))  # вызываем функцию, передаем вводимые значения (стороны фигур)
+# print(outer(5, 8, 2))  # вызываем функцию, передаем вводимые значения (стороны фигур)
+# print(outer(1, 6, 8))  # вызываем функцию, передаем вводимые значения (стороны фигур)
+
+# ------------------------------
+# s = 0  # объявили переменную
+#
+#
+# def outer(a, b, c):
+#     def inner(i, j):
+#         return i * j
+#
+#     global s  # сделали переменную глобальной
+#     s = 2 * (inner(a, b) + inner(a, c) + inner(b, c))
+#     return s
+#
+#
+# print(s)  # выводим содержимое глобальной переменной
+# outer(2, 4, 6)  # вызываем функцию, передаем вводимые значения (стороны фигур)
+# print(s)  # выводим содержимое глобальной переменной
+# outer(5, 8, 2)  # вызываем функцию, передаем вводимые значения (стороны фигур)
+# print(s)  # выводим содержимое глобальной переменной
+# outer(1, 6, 8)  # вызываем функцию, передаем вводимые значения (стороны фигур)
+# print(s)  # выводим содержимое глобальной переменной
+
+# ------------------
+
+def outer(a, b, c):  # 2, 4, 6
+    s = 0  # 44
+
+    def inner(i, j):
+        nonlocal s
+        s = s + i * j  # s += i * j   # s = 20 + 24 = 44
+
+    inner(a, b)  # 2, 4
+    inner(a, c)  # 2, 6
+    inner(b, c)  # 4, 6
+    return 2 * s  # 2 * 44
+
+
+print(outer(2, 4, 6))
+print(outer(5, 8, 2))
+print(outer(1, 6, 8))
