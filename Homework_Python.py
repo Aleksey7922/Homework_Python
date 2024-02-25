@@ -322,20 +322,25 @@ from random import randint
 # print(s)  # выводим содержимое глобальной переменной
 
 # ------------------
+#
+# def outer(a, b, c):  # 2, 4, 6
+#     s = 0  # 44
+#
+#     def inner(i, j):
+#         nonlocal s
+#         s = s + i * j  # s += i * j   # s = 20 + 24 = 44
+#
+#     inner(a, b)  # 2, 4
+#     inner(a, c)  # 2, 6
+#     inner(b, c)  # 4, 6
+#     return 2 * s  # 2 * 44
+#
+#
+# print(outer(2, 4, 6))
+# print(outer(5, 8, 2))
+# print(outer(1, 6, 8))
 
-def outer(a, b, c):  # 2, 4, 6
-    s = 0  # 44
 
-    def inner(i, j):
-        nonlocal s
-        s = s + i * j  # s += i * j   # s = 20 + 24 = 44
+# Homework № 15 -----------------------------------------------------------
 
-    inner(a, b)  # 2, 4
-    inner(a, c)  # 2, 6
-    inner(b, c)  # 4, 6
-    return 2 * s  # 2 * 44
-
-
-print(outer(2, 4, 6))
-print(outer(5, 8, 2))
-print(outer(1, 6, 8))
+print(list(filter(lambda i: i == i[::-1], ('madam', 'fire', 'tomato', 'book', 'kiosk', 'mom'))))
