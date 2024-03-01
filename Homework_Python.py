@@ -347,20 +347,28 @@ from random import randint
 
 # Homework № 16 -----------------------------------------------------------
 
-def avg(fn):
-    def wrap(*arg):
-        a = ""
-        for i in arg:
-            a += str(i) + ", "  # "2, 3, 3, 4, "
-        print("Среднее арифметическое:", a[:-2], "=", fn(*arg) / len(arg))
+#
+# def avg(fn):
+#     def wrap(*arg):
+#         a = ""
+#         for i in arg:
+#             a += str(i) + ", "  # "2, 3, 3, 4, "
+#         print("Среднее арифметическое:", a[:-2], "=", fn(*arg) / len(arg))
+#
+#     return wrap
+#
+#
+# @avg
+# def summa(*args):  # (2, 3, 3, 4) # функция находящая сумму, *args - любое кол-во элементов
+#     print("Сумма чисел:", ", ".join(map(str, args)), "=", sum(args))
+#     return sum(args)
+#
+#
+# summa(2, 3, 3, 4)
 
-    return wrap
 
+# Homework № 17 -----------------------------------------------------------
 
-@avg
-def summa(*args):  # (2, 3, 3, 4)
-    print("Сумма чисел:", ", ".join(map(str, args)), "=", sum(args))
-    return sum(args)
-
-
-summa(2, 3, 3, 4)
+fio = input("Введите ФИО: ").split()
+print(fio)
+print(f"{fio[0]} {fio[1][0]}.{fio[2][0]}.")
