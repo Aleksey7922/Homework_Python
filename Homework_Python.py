@@ -368,7 +368,18 @@ from random import randint
 
 
 # Homework № 17 -----------------------------------------------------------
+#
+# fio = input("Введите ФИО: ").split()
+# print(fio)
+# print(f"{fio[0]} {fio[1][0]}.{fio[2][0]}.")
 
-fio = input("Введите ФИО: ").split()
-print(fio)
-print(f"{fio[0]} {fio[1][0]}.{fio[2][0]}.")
+
+# Homework № 18 -----------------------------------------------------------
+
+
+import re
+
+s = "+ 7 499 456-45-78, +74994564578, 7 (499) 456 45 78, 74994564578"
+pattern = r'\+?7\d{10}'
+
+print(re.findall(pattern, s))
