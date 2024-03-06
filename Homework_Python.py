@@ -377,9 +377,18 @@ from random import randint
 # Homework № 18 -----------------------------------------------------------
 
 
+# import re
+#
+# s = "+ 7 499 456-45-78, +74994564578, 7 (499) 456 45 78, 74994564578"
+# pattern = r'\+?7\d{10}'
+#
+# print(re.findall(pattern, s))
+
+
+# Homework № 19 -----------------------------------------------------------
+
 import re
 
-s = "+ 7 499 456-45-78, +74994564578, 7 (499) 456 45 78, 74994564578"
-pattern = r'\+?7\d{10}'
-
-print(re.findall(pattern, s))
+password = "my-p@ssw0rd"
+reg = r"[A-Za-z\d\@-]"
+print(re.findall(reg, password))
