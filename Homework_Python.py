@@ -156,6 +156,7 @@
 # print(tpl)
 from random import randint
 
+
 # tpl = tuple(randint(0, 9) for i in range(10))  # сгенерировали кортеж
 # print(tpl)  # вывели кортеж
 # stl = [] # создали пустой СПИСОК
@@ -387,8 +388,24 @@ from random import randint
 
 # Homework № 19 -----------------------------------------------------------
 
-import re
+# import re
+#
+# password = "my-p@ssw0rd"
+# reg = r"[A-Za-z\d\@-]"
+# print(re.findall(reg, password))
 
-password = "my-p@ssw0rd"
-reg = r"[A-Za-z\d\@-]"
-print(re.findall(reg, password))
+
+# Homework № 20 -----------------------------------------------------------
+
+
+def negative_numbers(n):
+    if not n:
+        return 0
+    count = 0
+    if n[0] < 0:
+        count += 1
+    return negative_numbers(n[1:]) + count
+
+
+lst = [-2, 3, 8, -11, -4, 6]
+print(negative_numbers(lst))
